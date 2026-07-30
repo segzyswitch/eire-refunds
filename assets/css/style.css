@@ -1,0 +1,295 @@
+/* =========================================================
+   EIRE Tax Refunds — site theme
+   Built on top of Bootstrap 5 utility classes; this file only
+   covers the things Bootstrap doesn't give us out of the box.
+   ========================================================= */
+
+:root {
+  --itr-primary: #0f7173;
+  --itr-primary-dark: #0b5657;
+  --itr-secondary: #2b3a4a;
+  --itr-secondary-dark: #1c2733;
+  --itr-dark: #21262b;
+  --itr-green: #3fa66b;
+  --itr-text: #333333;
+}
+
+body {
+  font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+  color: var(--itr-text);
+  font-size: .95rem;
+}
+
+a { color: var(--itr-primary); }
+a:hover { color: var(--itr-primary-dark); }
+
+/* ---------------- Navbar ---------------- */
+.itr-navbar {
+  padding: 12px 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,.06);
+}
+.itr-navbar .navbar-brand {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1f1f1f;
+  white-space: nowrap;
+}
+.itr-navbar .navbar-brand span { color: var(--itr-primary); }
+.itr-navbar .navbar-nav {
+  gap: 2px;
+}
+.itr-navbar .nav-link {
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .01em;
+  color: #444;
+  padding: .5rem .55rem;
+  white-space: nowrap;
+}
+.itr-navbar .nav-link.active,
+.itr-navbar .nav-link:hover { color: var(--itr-primary); }
+.itr-navbar .btn-itr-primary {
+  font-size: .72rem;
+  padding: 9px 18px;
+  white-space: nowrap;
+  margin-left: 10px;
+}
+
+/* ---------------- Mobile offcanvas menu ---------------- */
+/* offcanvas-xl makes this render as a normal inline flex row at the xl
+   breakpoint (matching navbar-expand-xl) and a slide-in panel below it —
+   the sizing below only needs to target the slide-in (mobile) state. */
+.itr-offcanvas .offcanvas-title { font-weight: 700; color: #1f1f1f; }
+.itr-offcanvas .offcanvas-title span { color: var(--itr-primary); }
+@media (max-width: 1199.98px) {
+  .itr-offcanvas { width: 280px; }
+  .itr-offcanvas .navbar-nav { gap: 0; }
+  .itr-offcanvas .nav-link {
+    font-size: .95rem;
+    font-weight: 600;
+    padding: 14px 4px;
+    border-bottom: 1px solid #eee;
+    color: #333;
+  }
+  .itr-offcanvas .nav-link.active,
+  .itr-offcanvas .nav-link:hover { color: var(--itr-primary); }
+  .itr-offcanvas .btn-itr-primary { font-size: .85rem; padding: 12px 18px; }
+}
+.btn-itr-primary {
+  background: var(--itr-primary);
+  border-color: var(--itr-primary);
+  color: #fff;
+  font-weight: 700;
+  font-size: .82rem;
+  padding: 10px 22px;
+  border-radius: 999px;
+}
+.btn-itr-primary:hover { background: var(--itr-primary-dark); border-color: var(--itr-primary-dark); color: #fff; }
+
+.btn-itr-outline {
+  background: #fff;
+  border: 1px solid var(--itr-primary);
+  color: var(--itr-primary);
+  font-weight: 600;
+  border-radius: 999px;
+  padding: 10px 22px;
+}
+.btn-itr-outline:hover { background: var(--itr-primary); color: #fff; }
+
+/* ---------------- Hero / page header banners ---------------- */
+.itr-hero {
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  position: relative;
+}
+.itr-hero-overlay {
+  background: rgba(20,15,15,.45);
+  position: absolute;
+  inset: 0;
+}
+.itr-hero .container { position: relative; z-index: 1; }
+
+.itr-page-banner {
+  background: var(--itr-secondary);
+  color: #fff;
+  padding: 60px 0;
+}
+
+/* ---------------- Form card wrapper (page context) ---------------- */
+.itr-form-card-wrap .form-card-header {
+  background: var(--itr-primary);
+  color: #fff;
+  font-weight: 700;
+  padding: 14px 20px;
+  border-radius: 8px 8px 0 0;
+}
+
+/* ---------------- Trust strip ---------------- */
+.itr-trust-strip {
+  background: var(--itr-primary);
+  color: #fff;
+  padding: 14px 0;
+  font-size: .85rem;
+}
+.itr-trust-strip .badge-shield {
+  width: 46px; height: 46px;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: rgba(255,255,255,.15);
+  border-radius: 6px;
+}
+
+/* ---------------- How it works ---------------- */
+.itr-steps-panel { background: var(--itr-primary); border-radius: 6px; overflow: hidden; }
+.itr-steps-panel .panel-title { background: rgba(0,0,0,.12); color: #fff; font-weight: 700; padding: 14px 20px; }
+.itr-step { padding: 20px; color: #fff; }
+.itr-step .step-num {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 26px; height: 26px; border-radius: 50%;
+  background: #fff; color: var(--itr-primary); font-weight: 700; font-size: .85rem;
+  margin-bottom: 10px;
+}
+.itr-step p { font-size: .82rem; opacity: .95; }
+
+/* ---------------- Stat / benefit blocks ---------------- */
+.itr-stats-section { background: var(--itr-secondary); color: #fff; padding: 60px 0; }
+.itr-stat-icon { font-size: 2rem; margin-bottom: 12px; }
+
+/* ---------------- CTA banner ---------------- */
+.itr-cta-banner { background: var(--itr-secondary); color: #fff; padding: 50px 0; text-align: center; }
+.itr-cta-banner .btn-outline-light { border-radius: 999px; font-weight: 600; }
+
+/* ---------------- Cards ---------------- */
+.itr-rebate-card { background: #f2f2f2; border-radius: 6px; overflow: hidden; }
+.itr-rebate-card img { object-fit: cover; height: 100%; width: 100%; }
+.itr-rebate-icon { color: var(--itr-primary); font-size: 1.4rem; }
+
+/* ---------------- Testimonials ---------------- */
+.itr-testimonial p { font-style: italic; }
+.itr-testimonial cite { font-style: normal; font-weight: 600; display: block; margin-top: 8px; }
+
+/* ---------------- FAQ accordion ---------------- */
+.itr-faq-category { color: var(--itr-primary); font-weight: 700; margin: 34px 0 10px; }
+.itr-faq .accordion-button {
+  font-weight: 600;
+  background: #fff;
+  box-shadow: none;
+}
+.itr-faq .accordion-button:not(.collapsed) { color: var(--itr-primary); background: #fff; }
+.itr-faq .accordion-item { border-left: none; border-right: none; border-top: none; }
+
+/* ---------------- Tax tips blog cards ---------------- */
+.itr-blog-thumb { background: #e9e9e9; height: 180px; border-radius: 4px; }
+.itr-blog-card h3 { font-size: 1.05rem; }
+.itr-blog-card p { font-size: .88rem; color: #555; }
+.itr-read-more { font-weight: 700; font-size: .82rem; text-transform: uppercase; }
+
+/* ---------------- Footer ---------------- */
+.itr-footer { background: var(--itr-dark); color: #cfcfcf; padding: 50px 0 20px; }
+.itr-footer h5 { color: #fff; font-size: 1rem; margin-bottom: 16px; }
+.itr-footer a { color: #cfcfcf; text-decoration: none; font-size: .85rem; }
+.itr-footer a:hover { color: #fff; }
+.itr-footer ul { list-style: none; padding: 0; }
+.itr-footer li { margin-bottom: 8px; }
+.itr-footer .social-icons a {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 34px; height: 34px; border-radius: 50%;
+  background: rgba(255,255,255,.08); margin-right: 8px;
+}
+.itr-footer-bottom { border-top: 1px solid rgba(255,255,255,.1); padding-top: 16px; margin-top: 30px; font-size: .78rem; }
+.badge-tax-return { background: #1c5aa8; }
+.badge-plus { background: #29a3e0; }
+
+/* ---------------- Legal pages ---------------- */
+.itr-legal { font-size: .9rem; line-height: 1.7; }
+.itr-legal h2 { font-size: 1.2rem; margin-top: 30px; }
+.itr-legal h3 { font-size: 1.05rem; margin-top: 22px; }
+
+/* ---------------- Home hero (contained photo + synced text carousel) ---------------- */
+.itr-hero-section { padding: 20px 0; }
+
+.itr-hero-heading {
+  font-size: 2.3rem;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #222;
+  margin-bottom: 18px;
+}
+.itr-hero-underline {
+  display: inline-block;
+  border-bottom: 3px solid var(--itr-primary);
+  padding-bottom: 2px;
+}
+.itr-hero-copy { font-size: .98rem; color: #333; line-height: 1.6; max-width: 420px; }
+
+.itr-hero-photo-wrap {
+  position: relative;
+  /* max-width: 380px; */
+  margin: 0 auto;
+}
+.itr-hero-photo-deco {
+  position: absolute;
+  top: -44px;
+  right: -44px;
+  width: 75%;
+  height: 75%;
+  z-index: 0;
+  background-image:
+    linear-gradient(135deg, #e4e4e4 25%, transparent 25.5%, transparent 50%, #e4e4e4 50.5%, #e4e4e4 75%, transparent 75.5%, transparent);
+  background-size: 34px 34px;
+  opacity: .8;
+}
+.itr-hero-photo {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  /* aspect-ratio: 1 / 1; */
+  /* object-fit: cover; */
+  border-radius: 4px;
+}
+.itr-hero-badge {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: -8%;
+  transform: translateY(-50%);
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background: var(--itr-primary);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 1.3;
+  padding: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,.25);
+}
+.itr-hero-badge span { font-size: .78rem; }
+.itr-hero-badge strong { font-size: 1.5rem; font-weight: 700; }
+
+.itr-hero-indicators { position: relative; margin-top: 20px; }
+.itr-hero-indicators button {
+  background-color: var(--itr-primary) !important;
+  opacity: .35;
+  width: 8px; height: 8px; border-radius: 50%;
+}
+.itr-hero-indicators button.active { opacity: 1; }
+
+@media (max-width: 991px) {
+  .itr-hero-heading { font-size: 1.8rem; }
+  .itr-hero-copy { max-width: 100%; }
+  .itr-hero-badge { left: -6%; width: 110px; height: 110px; }
+  .itr-hero-badge strong { font-size: 1.2rem; }
+}
+@media (max-width: 767px) {
+  .itr-hero-photo-wrap { max-width: 260px; }
+  .itr-hero-badge { left: auto; right: -14px; top: -14px; transform: none; width: 92px; height: 92px; }
+  .itr-hero-badge strong { font-size: 1.05rem; }
+}
+
+/* ---------------- Misc ---------------- */
+.itr-eyebrow { color: var(--itr-primary); font-weight: 700; text-transform: uppercase; font-size: .8rem; letter-spacing: .04em; }
