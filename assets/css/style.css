@@ -117,6 +117,9 @@ a:hover { color: var(--itr-primary-dark); }
 }
 
 /* ---------------- Form card wrapper (page context) ---------------- */
+.itr-form-embed {
+  margin-bottom: -35px; /* pull up to overlap footer */
+}
 .itr-form-card-wrap .form-card-header {
   background: var(--itr-primary);
   color: #fff;
