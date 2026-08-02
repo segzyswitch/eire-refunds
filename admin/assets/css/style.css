@@ -1,0 +1,434 @@
+/* ==========================================================================
+   EIRE Tax Refunds — Admin Panel theme
+   Brand tokens pulled from the public site: deep teal, MB green CTA,
+   logo orange, and a navy ink used for the site's stat band.
+   ========================================================================== */
+:root {
+  --etr-teal: #0b6e63;
+  --etr-teal-dark: #084f47;
+  --etr-teal-light: #e6f2f0;
+  --etr-green: #3fae5b;
+  --etr-green-dark: #338f4a;
+  --etr-orange: #f4821f;
+  --etr-navy: #263449;
+  --etr-navy-dark: #1b2536;
+  --etr-ink: #1f2937;
+  --etr-muted: #6b7686;
+  --etr-bg: #f4f6f7;
+  --etr-border: #e4e8eb;
+  --sidebar-width: 260px;
+  --sidebar-width-collapsed: 78px;
+  --topbar-height: 66px;
+}
+
+body {
+  background: var(--etr-bg);
+  color: var(--etr-ink);
+  font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  font-size: 0.925rem;
+}
+
+a { color: var(--etr-teal); }
+a:hover { color: var(--etr-teal-dark); }
+
+/* ---------------------------------------------------------------------- */
+/* Layout shell                                                            */
+/* ---------------------------------------------------------------------- */
+.app-shell {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: var(--sidebar-width);
+  min-width: var(--sidebar-width);
+  background: linear-gradient(180deg, var(--etr-navy) 0%, var(--etr-navy-dark) 100%);
+  color: #cfd8e3;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  transition: all .2s ease;
+  z-index: 1030;
+}
+
+body.sidebar-collapsed .sidebar {
+  width: var(--sidebar-width-collapsed);
+  min-width: var(--sidebar-width-collapsed);
+}
+
+body.sidebar-collapsed .sidebar .nav-label,
+body.sidebar-collapsed .sidebar .brand-text,
+body.sidebar-collapsed .sidebar .nav-section-title {
+  display: none;
+}
+
+.sidebar-brand {
+  display: flex;
+  align-items: center;
+  gap: .65rem;
+  padding: 1.1rem 1.25rem;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.sidebar-brand .logo-mark {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: var(--etr-orange);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.sidebar-brand .brand-text strong {
+  display: block;
+  color: #fff;
+  line-height: 1.1;
+  font-size: 1rem;
+  letter-spacing: .02em;
+}
+
+.sidebar-brand .brand-text span {
+  font-size: .68rem;
+  color: #9fb0c3;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+.nav-section-title {
+  font-size: .68rem;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: #7c8aa0;
+  padding: 1rem 1.25rem .35rem;
+}
+
+.sidebar .nav-link {
+  color: #cfd8e3;
+  padding: .6rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+  border-left: 3px solid transparent;
+  font-size: .875rem;
+  border-radius: 0;
+}
+
+.sidebar .nav-link i { font-size: 1.05rem; width: 20px; text-align: center; flex-shrink: 0; }
+
+.sidebar .nav-link:hover {
+  background: rgba(255,255,255,.06);
+  color: #fff;
+}
+
+.sidebar .nav-link.active {
+  background: rgba(63,174,91,.16);
+  border-left-color: var(--etr-green);
+  color: #fff;
+  font-weight: 600;
+}
+
+.sidebar-footer {
+  padding: 1rem 1.25rem;
+  border-top: 1px solid rgba(255,255,255,.08);
+  font-size: .75rem;
+  color: #7c8aa0;
+}
+
+/* Main column ------------------------------------------------------------ */
+.main-col {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.topbar {
+  height: var(--topbar-height);
+  background: #fff;
+  border-bottom: 1px solid var(--etr-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.25rem;
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+}
+
+.topbar .btn-toggle {
+  border: none;
+  background: transparent;
+  font-size: 1.25rem;
+  color: var(--etr-ink);
+}
+
+.topbar .search-box {
+  max-width: 320px;
+}
+.topbar .search-box .form-control {
+  background: var(--etr-bg);
+  border: 1px solid var(--etr-border);
+}
+
+.topbar .icon-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--etr-muted);
+  background: var(--etr-bg);
+  border: 1px solid var(--etr-border);
+  position: relative;
+}
+.topbar .icon-btn .dot {
+  position: absolute;
+  top: 6px;
+  right: 7px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--etr-orange);
+  border: 2px solid #fff;
+}
+
+.avatar-circle {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--etr-teal);
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: .85rem;
+}
+
+.content-area {
+  padding: 1.5rem;
+  flex: 1;
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: .75rem;
+  margin-bottom: 1.25rem;
+}
+
+.page-header h1 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: .15rem;
+}
+
+.breadcrumb-eyebrow {
+  font-size: .75rem;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--etr-muted);
+}
+
+/* ---------------------------------------------------------------------- */
+/* Cards & KPIs                                                            */
+/* ---------------------------------------------------------------------- */
+.card {
+  border: 1px solid var(--etr-border);
+  border-radius: .8rem;
+  box-shadow: 0 1px 2px rgba(16,24,40,.03);
+}
+
+.card-header {
+  background: #fff;
+  border-bottom: 1px solid var(--etr-border);
+  font-weight: 600;
+  border-radius: .8rem .8rem 0 0 !important;
+}
+
+.kpi-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.1rem 1.25rem;
+}
+
+.kpi-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: .7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  flex-shrink: 0;
+}
+
+.kpi-icon.teal { background: var(--etr-teal-light); color: var(--etr-teal); }
+.kpi-icon.orange { background: #fdeadb; color: var(--etr-orange); }
+.kpi-icon.green { background: #e4f5e8; color: var(--etr-green-dark); }
+.kpi-icon.navy { background: #e7eaf0; color: var(--etr-navy); }
+
+.kpi-value {
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.kpi-label {
+  color: var(--etr-muted);
+  font-size: .8rem;
+}
+
+.kpi-trend {
+  font-size: .78rem;
+  font-weight: 600;
+}
+.kpi-trend.up { color: var(--etr-green-dark); }
+.kpi-trend.down { color: #c0392b; }
+
+/* ---------------------------------------------------------------------- */
+/* Buttons                                                                 */
+/* ---------------------------------------------------------------------- */
+.btn-brand {
+  background: var(--etr-green);
+  border-color: var(--etr-green);
+  color: #fff;
+  font-weight: 600;
+}
+.btn-brand:hover { background: var(--etr-green-dark); border-color: var(--etr-green-dark); color: #fff; }
+
+.btn-teal {
+  background: var(--etr-teal);
+  border-color: var(--etr-teal);
+  color: #fff;
+  font-weight: 600;
+}
+.btn-teal:hover { background: var(--etr-teal-dark); border-color: var(--etr-teal-dark); color: #fff; }
+
+.btn-outline-teal {
+  color: var(--etr-teal);
+  border-color: var(--etr-teal);
+}
+.btn-outline-teal:hover { background: var(--etr-teal); color: #fff; }
+
+/* ---------------------------------------------------------------------- */
+/* Badges / status pills                                                  */
+/* ---------------------------------------------------------------------- */
+.status-pill {
+  font-size: .72rem;
+  font-weight: 600;
+  padding: .3rem .65rem;
+  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+}
+.status-pill::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+}
+.status-paid { background: #e4f5e8; color: var(--etr-green-dark); }
+.status-processing { background: #fdf3d8; color: #a9790c; }
+.status-awaiting { background: #e7eaf0; color: var(--etr-navy); }
+.status-not-due { background: #fbe6e4; color: #c0392b; }
+.status-published { background: #e4f5e8; color: var(--etr-green-dark); }
+.status-draft { background: #f1f2f4; color: var(--etr-muted); }
+
+/* ---------------------------------------------------------------------- */
+/* Forms                                                                   */
+/* ---------------------------------------------------------------------- */
+.form-label { font-weight: 600; font-size: .85rem; }
+.form-control:focus, .form-select:focus {
+  border-color: var(--etr-teal);
+  box-shadow: 0 0 0 .2rem rgba(11,110,99,.12);
+}
+.form-check-input:checked {
+  background-color: var(--etr-teal);
+  border-color: var(--etr-teal);
+}
+.form-switch .form-check-input:checked { background-color: var(--etr-green); border-color: var(--etr-green); }
+
+.section-divider {
+  border-top: 1px dashed var(--etr-border);
+  margin: 1.5rem 0;
+}
+
+/* Custom slider thumbnail preview card */
+.slider-thumb {
+  width: 90px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: .5rem;
+  border: 1px solid var(--etr-border);
+}
+
+/* Table polish */
+.table > :not(caption) > * > * { vertical-align: middle; }
+.table thead th {
+  font-size: .72rem;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  color: var(--etr-muted);
+  border-bottom-width: 1px;
+  background: #fafbfc;
+}
+
+.bg-teal { background-color: var(--etr-teal) !important; }
+.text-teal { color: var(--etr-teal) !important; }
+
+/* Login page ------------------------------------------------------------ */
+.login-shell {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at top left, #0d7a6d 0%, var(--etr-navy-dark) 55%);
+  padding: 1.5rem;
+}
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  border: none;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,.3);
+}
+.login-card .login-brand {
+  background: var(--etr-teal);
+  color: #fff;
+  padding: 2rem 2rem 1.5rem;
+}
+
+/* Responsive -------------------------------------------------------------*/
+@media (max-width: 991.98px) {
+  .sidebar {
+    position: fixed;
+    left: -100%;
+    height: 100vh;
+  }
+  body.sidebar-mobile-open .sidebar {
+    left: 0;
+  }
+  .sidebar-backdrop {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.4);
+    z-index: 1025;
+  }
+  body.sidebar-mobile-open .sidebar-backdrop {
+    display: block;
+  }
+}

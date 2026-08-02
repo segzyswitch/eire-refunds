@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row gy-4">
       <div class="col-md-4">
-        <img src="assets/images/logo.png" height="40" class="mb-3" alt="EIRE Tax Refunds" />
+        <img src="assets/images/logo.png" height="35" class="mb-3" alt="EIRE Tax Refunds" />
         <h5>Explore</h5>
         <ul>
           <li><a href="index.php">Home &amp; Online Form</a></li>

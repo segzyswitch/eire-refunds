@@ -51,7 +51,7 @@ $itr_rf_submit_url = 'request/form.php';
     .itr-rf__intro {
       color: #eef;
       background-color: var(--itr-primary);
-      margin: -20px -20px 20px;
+      margin: -20px -20px 15px;
       padding: 18px 20px;
     }
 
@@ -409,11 +409,11 @@ $itr_rf_submit_url = 'request/form.php';
     <div class="itr-rf__intro">
 
       <div class="itr-rf__intro-step" data-itrrf-intro-for="1">
-        <h3 style="margin-bottom: 10px;">Tax Rebate Application Form</h3>
-        <p class="itr-rf__intro-text">
+        <h4>Tax Rebate Application Form</h4>
+        <!-- <p class="itr-rf__intro-text">
           Simply complete this form and we'll review your taxes to
           see if you're due a rebate.
-        </p>
+        </p> -->
       </div>
 
       <div class="itr-rf__intro-step" data-itrrf-intro-for="2" hidden>
@@ -446,6 +446,7 @@ $itr_rf_submit_url = 'request/form.php';
 
       <!-- ---------- STEP 1 ---------- -->
       <div class="itr-rf__page" data-itrrf-page="1">
+        <p class="small text-muted">Simply complete this form and we’ll review your taxes to see if you’re due a rebate.</p>
 
         <div class="itr-rf__field">
           <input type="text" id="itrrf-first-name" name="first_name" placeholder=" " autocomplete="given-name" data-itrrf-scope="stepOne" required>
@@ -982,7 +983,7 @@ $itr_rf_submit_url = 'request/form.php';
       if (n <= 4) {
         const page = root.querySelector(`[data-itrrf-page="${n}"]`);
         const firstInput = page && page.querySelector("input, select");
-        if (firstInput) firstInput.focus();
+        // if (firstInput) firstInput.focus();
       }
       state.currentPage = n;
     }

@@ -36,7 +36,7 @@ $storyBody = itr_setting('story_body');
     <div class="row align-items-center gy-4">
 
       <!-- Text + photo travel together as one slide -->
-      <div class="col-lg-7">
+      <div class="col-lg-8">
         <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4500">
           <div class="carousel-inner">
 
@@ -49,13 +49,13 @@ $storyBody = itr_setting('story_body');
             ?>
             <div class="carousel-item<?php echo $i === 0 ? ' active' : ''; ?>">
               <div class="row align-items-center gy-4">
-                <div class="col-md-6">
+                <div class="col-md-6 order-2 order-sm-1 pt-3 pt-sm-0">
                   <h1 class="itr-hero-heading"><?php echo htmlspecialchars($line1); ?><?php if ($line2 !== ''): ?><br><span class="itr-hero-underline"><?php echo htmlspecialchars($line2); ?></span><?php endif; ?></h1>
                   <p class="itr-hero-copy"><?php echo $slide['subtitle']; ?></p>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 px-sm-0 pt-3 pt-sm-0 order-1 order-sm-2">
                   <div class="itr-hero-photo-wrap">
-                    <div class="itr-hero-photo-deco"></div>
+                    <!-- <div class="itr-hero-photo-deco"></div> -->
                     <img src="<?php echo htmlspecialchars($slide['image']); ?>" class="itr-hero-photo" alt="<?php echo htmlspecialchars($slide['title']); ?>">
                     <div class="itr-hero-badge"><span><?php echo htmlspecialchars($slide['badge_text']); ?></span><strong>&euro;<?php echo htmlspecialchars($slide['badge_value']); ?></strong></div>
                   </div>
@@ -69,7 +69,7 @@ $storyBody = itr_setting('story_body');
       </div>
 
       <!-- Form: static, doesn't change between slides -->
-      <div class="col-lg-5">
+      <div class="col-lg-4 ps-sm-0 position-relative mb-auto">
         <div class="itr-form-embed mx-auto" style="max-width:420px;">
           <?php include 'inc/multi-form.php'; ?>
         </div>
