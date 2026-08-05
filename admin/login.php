@@ -59,7 +59,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
   <!-- X-con -->
-  <link rel="icon" type="image/x-icon" href="https://irisheiretaxrefund.ie/assets/images/icon.png">
+  <link rel="icon" type="image/x-icon" href="assets/icon.png">
 </head>
 <body>
 <div class="login-shell">
@@ -67,7 +67,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <div class="login-brand text-center">
       <div class="d-inline-flex align-items-center justify-content-center rounded-3 mb-3">
         <!-- <i class="bi bi-shield-check fs-3"></i> -->
-        <img src="https://irisheiretaxrefund.ie/assets/images/icon.png" alt="EIRE TAX" style="height:40px;">
+        <img src="assets/icon.png" alt="EIRE TAX" style="height:40px;">
       </div>
       <h4 class="mb-0 fw-bold">EIRE TAX REFUNDS</h4>
       <div class="small opacity-75">Admin Panel</div>
