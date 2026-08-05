@@ -34,9 +34,9 @@ include 'inc/header.php';
     <h1 class="fw-bold" style="color:var(--itr-primary);">A Guide to Claiming Tax Back on Medical Expenses</h1>
 
     <p class="mt-3">All PAYE workers can claim a tax rebate on a host of medical expenses incurred. These are not just expenses paid for you and your immediate family, but also for any person where you paid the bill.</p>
-    <p>As a registered Irish Tax Agent, we are happy to help maximise your tax rebate. To get started, simply complete our quick online registration form and we'll revert within 1 working day with next steps towards securing your tax refund. If you are already registered, email your receipts to <a href="mailto:medical@irishtaxrebates.ie">medical@irishtaxrebates.ie</a> or post to EIRE Tax Refunds, 1 Leinster Street, Athy, Co. Kildare.</p>
+    <p>As a registered Irish Tax Agent, we are happy to help maximise your tax rebate. To get started, simply complete our quick online registration form and we'll revert within 1 working day with next steps towards securing your tax refund. If you are already registered, email your receipts to <a href="mailto:medical@irisheiretaxrefund.ie">medical@irisheiretaxrefund.ie</a> or post to EIRE Tax Refunds, 1 Leinster Street, Athy, Co. Kildare.</p>
 
-    <p class="mt-5">If you think you may be entitled to these tax credits, contact our experts at <a href="mailto:info@irishtaxrebates.ie">info@irishtaxrebates.ie</a>.</p>
+    <p class="mt-5">If you think you may be entitled to these tax credits, contact our experts at <a href="mailto:info@irisheiretaxrefund.ie">info@irisheiretaxrefund.ie</a>.</p>
   </div>
 </section>
 

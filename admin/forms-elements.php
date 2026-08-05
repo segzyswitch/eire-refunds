@@ -104,7 +104,7 @@ require __DIR__ . '/includes/sidebar.php';
             <label class="form-label">Website URL</label>
             <div class="input-group">
               <span class="input-group-text"><i class="bi bi-globe"></i></span>
-              <input type="text" class="form-control" value="irishtaxrebates.ie">
+              <input type="text" class="form-control" value="irisheiretaxrefund.ie">
             </div>
           </div>
         </div>
@@ -125,7 +125,7 @@ require __DIR__ . '/includes/sidebar.php';
 
             <form class="needs-validation" novalidate>
               <label class="form-label">Support email <span class="text-danger">*</span></label>
-              <input type="email" class="form-control mb-1" required value="info@irishtaxrebates.ie">
+              <input type="email" class="form-control mb-1" required value="info@irisheiretaxrefund.ie">
               <div class="valid-feedback d-block small text-success"><i class="bi bi-check-circle me-1"></i>Looks good.</div>
             </form>
           </div>

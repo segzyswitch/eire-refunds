@@ -21,7 +21,7 @@ $trustMessage = itr_setting('trust_message', 'Over 20 years experience in offeri
   <div class="container">
     <div class="row gy-4">
       <div class="col-lg-8">
-        <h2 class="fw-bold" style="color:var(--itr-primary);">Over 20 years of tax rebate expertise</h2>
+        <h2 class="fw-bold" style="color:var(--itr-primary);">Many years of tax rebate expertise</h2>
         <p class="mt-3">Be it tax credits, tax reliefs or Universal Social Charge, PAYE workers regularly go about their lives without realising they could be owed thousands in tax rebates from Revenue. That's where we come in. Our purpose is clear: help people check for overpaid tax with Revenue, in the easiest possible way, and see what rebate they could be due back. We created our 60-second application form to make this process as simple, fast and successful as possible, and today we're a market leader in securing tax rebates for PAYE workers across Ireland.</p>
       </div>
       <div class="col-lg-4">
@@ -41,7 +41,7 @@ $trustMessage = itr_setting('trust_message', 'Over 20 years experience in offeri
 <section class="itr-stats-section text-center">
   <div class="container">
     <h2 class="fw-bold mb-3">Benefits</h2>
-    <p class="mb-4">EIRE Tax Refunds is trusted by over 320,000 Irish tax payers every year. We carry out full and thorough reviews – we check back through up to 4 years of taxes to give you the best possible chance of receiving a rebate.</p>
+    <p class="mb-4">EIRE Tax Refunds is trusted by Irish tax payers every year. We carry out full and thorough reviews - we check back through up to 4 years of taxes to give you the best possible chance of receiving a rebate.</p>
     <hr style="width:60px;opacity:.6;" class="mx-auto mb-4">
     <div class="row g-4">
       <?php foreach ($statsItems as $stat): ?>

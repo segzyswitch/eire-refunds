@@ -10,7 +10,7 @@ $faq_categories = itr_faqs_grouped();
   <div class="container">
     <p class="text-muted small">Frequently Asked Questions</p>
     <h1 class="fw-bold" style="color:var(--itr-primary);">Your Tax Rebate - FAQs</h1>
-    <p class="mt-3">Here are some of our most frequently asked questions about EIRE Tax Refunds. If you have a question that's not answered here, please use our live chat to speak to our Customer Service team, or email us at <a href="mailto:<?php echo htmlspecialchars(itr_setting('contact_email', 'info@irishtaxrebates.ie')); ?>"><?php echo htmlspecialchars(itr_setting('contact_email', 'info@irishtaxrebates.ie')); ?></a>.</p>
+    <p class="mt-3">Here are some of our most frequently asked questions about EIRE Tax Refunds. If you have a question that's not answered here, please use our live chat to speak to our Customer Service team, or email us at <a href="mailto:<?php echo htmlspecialchars(itr_setting('contact_email', 'info@irisheiretaxrefund.ie')); ?>"><?php echo htmlspecialchars(itr_setting('contact_email', 'info@irisheiretaxrefund.ie')); ?></a>.</p>
 
     <?php if (empty($faq_categories)): ?>
       <div class="alert alert-light border mt-4">No FAQs are published yet. Add some from the admin panel's FAQs page.</div>

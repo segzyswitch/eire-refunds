@@ -21,18 +21,18 @@
 
       <div class="col-md-4">
         <h5>Contact Us</h5>
-        <p class="mb-2">Phone: <?php echo htmlspecialchars(itr_setting('contact_phone_1', '059-8634 794')); ?><br><?php echo htmlspecialchars(itr_setting('contact_phone_2', '01-6755 010')); ?></p>
-        <p class="mb-2">Email: <a href="mailto:<?php echo htmlspecialchars(itr_setting('contact_email', 'info@irishtaxrebates.ie')); ?>"><?php echo htmlspecialchars(itr_setting('contact_email', 'info@irishtaxrebates.ie')); ?></a></p>
-        <p><?php echo nl2br(htmlspecialchars(itr_setting('contact_address', 'EIRE Tax Refunds, MB Tax Group, 1 Leinster St., Athy, Co. Kildare, Ireland, R14 K226'))); ?></p>
+        <p class="mb-2">Phone: <?php echo htmlspecialchars(itr_setting('contact_phone_1', '')); ?><br><?php echo htmlspecialchars(itr_setting('contact_phone_2', '')); ?></p>
+        <p class="mb-2">Email: <a href="mailto:<?php echo htmlspecialchars(itr_setting('contact_email', '')); ?>"><?php echo htmlspecialchars(itr_setting('contact_email', '')); ?></a></p>
+        <p><?php echo nl2br(htmlspecialchars(itr_setting('contact_address', ''))); ?></p>
       </div>
 
       <div class="col-md-4">
-        <h5>Also from the MB Tax Group</h5>
+        <!-- <h5>Also from the MB Tax Group</h5> -->
+        <h5>Tax Returns Made Simple</h5>
         <p class="mb-3">
           <span class="badge badge-tax-return px-2 py-2" style="border-radius: 0.375rem 0 0 0.375rem;">Tax Return</span><span class="badge badge-plus px-2 py-2" style="border-radius: 0 0.375rem 0.375rem 0;">Plus</span>
         </p>
-        <p class="fw-bold text-white mb-1">Tax Returns Made Simple</p>
-        <p>Take the stress out of tax returns with our simple, fast, accurate service from just &euro;299.</p>
+        <p>With highest tax returns possible depending on your job, wages, salaries, qualification, threshold and general status. Our fees are reasonable and varies depending on the level of services render and total amount claimed back on your behalf.</p>
         <a href="#"><i class="bi bi-box-arrow-up-right me-1"></i>Visit Tax Return Plus</a>
       </div>
     </div>
@@ -47,7 +47,7 @@
 
     <div class="itr-footer-bottom d-flex flex-wrap justify-content-between">
       <div>
-        CRO:<?php echo htmlspecialchars(itr_setting('footer_cro', '473739')); ?>&nbsp; &nbsp;VAT:<?php echo htmlspecialchars(itr_setting('footer_vat', '9717017R')); ?>&nbsp; &nbsp;
+        CRO:<?php echo htmlspecialchars(itr_setting('footer_cro', '')); ?>&nbsp; &nbsp;VAT:<?php echo htmlspecialchars(itr_setting('footer_vat', '9717017R')); ?>&nbsp; &nbsp;
         <a href="privacy-policy.php">Privacy Policy</a>&nbsp; &nbsp;
         <a href="cookie-policy.php">Cookie Policy</a>&nbsp; &nbsp;
         <a href="terms-conditions.php">Terms &amp; Conditions</a>

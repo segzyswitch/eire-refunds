@@ -70,7 +70,7 @@ include 'inc/header.php';
     <p>We may use tracking technology to see whether emails we send you have been opened, clicked, or forwarded, so
     we can make our communications more useful. If you'd prefer we didn't track this, you can unsubscribe — it
     isn't possible for us to send tracking-free versions of these emails individually. Registered users can update
-    their communication preferences at any time by contacting <a href="mailto:dataprotection@irishtaxrebates.ie">dataprotection@irishtaxrebates.ie</a>,
+    their communication preferences at any time by contacting <a href="mailto:dataprotection@irisheiretaxrefund.ie">dataprotection@irisheiretaxrefund.ie</a>,
     or by following the unsubscribe instructions in any email we send you. We may update this notice from time to
     time; the revision date at the top of this page will always reflect the latest version.</p>
 
