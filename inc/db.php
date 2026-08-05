@@ -8,17 +8,17 @@
  * environment — this is the only place credentials live.
  */
 
-// const DB_HOST = '127.0.0.1';
-// const DB_NAME = 'eire_tax_admin';
-// const DB_USER = 'root';
-// const DB_PASS = '';
-// const DB_CHARSET = 'utf8mb4';
-
-const DB_HOST = 'localhost';
-const DB_NAME = 'eiretaxr_main_db';
-const DB_USER = 'eiretaxr_main';
-const DB_PASS = 'Segzy2026@';
+const DB_HOST = '127.0.0.1';
+const DB_NAME = 'eire_tax_admin';
+const DB_USER = 'root';
+const DB_PASS = '';
 const DB_CHARSET = 'utf8mb4';
+
+// const DB_HOST = 'localhost';
+// const DB_NAME = 'eiretaxr_main_db';
+// const DB_USER = 'eiretaxr_main';
+// const DB_PASS = 'Segzy2026@';
+// const DB_CHARSET = 'utf8mb4';
 
 /**
  * Returns a shared PDO instance (one connection per request). Throws on

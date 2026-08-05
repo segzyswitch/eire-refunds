@@ -230,6 +230,12 @@ a:hover { color: var(--itr-primary-dark); }
 }
 .itr-hero-copy { font-size: .98rem; color: #333; line-height: 1.6; max-width: 420px; }
 
+.itr-slider-graphic {
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+  top: -80px;
+}
 .itr-hero-photo-wrap {
   position: relative;
   /* max-width: 380px; */
@@ -255,6 +261,7 @@ a:hover { color: var(--itr-primary-dark); }
   /* aspect-ratio: 1 / 1; */
   /* object-fit: cover; */
   transform: scale(1.2);
+  margin-top: 100px;
 }
 .itr-hero-badge {
   position: absolute;
@@ -298,6 +305,7 @@ a:hover { color: var(--itr-primary-dark); }
   .itr-hero-photo-wrap { max-width: 260px; }
   .itr-hero-badge { left: auto; right: -14px; top: -14px; transform: none; width: 92px; height: 92px; }
   .itr-hero-badge strong { font-size: 1.05rem; }
+  .itr-slider-graphic { top: -120px; }
 }
 
 /* ---------------- Misc ---------------- */

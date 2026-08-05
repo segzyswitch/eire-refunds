@@ -56,6 +56,7 @@ $storyBody = itr_setting('story_body');
                 <div class="col-md-6 px-sm-0 pt-3 pt-sm-0 order-1 order-sm-2">
                   <div class="itr-hero-photo-wrap">
                     <!-- <div class="itr-hero-photo-deco"></div> -->
+                    <img src="assets/images/slider-graphic.png" class="itr-slider-graphic" />
                     <img src="<?php echo htmlspecialchars($slide['image']); ?>" class="itr-hero-photo" alt="<?php echo htmlspecialchars($slide['title']); ?>">
                     <div class="itr-hero-badge"><span><?php echo htmlspecialchars($slide['badge_text']); ?></span><strong>&euro;<?php echo htmlspecialchars($slide['badge_value']); ?></strong></div>
                   </div>
