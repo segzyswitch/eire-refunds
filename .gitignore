@@ -1,1 +1,6 @@
 admin/schema.sql
+error_log
+inc/error_log
+admin/error_log
+admin/includes/error_log
+admin/includes/dbx.php

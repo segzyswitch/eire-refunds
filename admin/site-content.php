@@ -6,22 +6,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $formType = $_POST['form_type'] ?? '';
 
     if ($formType === 'hero') {
-        save_site_setting(itr_db(), 'hero_heading', trim($_POST['heading'] ?? ''));
-        save_site_setting(itr_db(), 'hero_body', trim($_POST['body'] ?? ''));
-        save_site_setting(itr_db(), 'hero_average_rebate', trim($_POST['average_rebate'] ?? ''));
+        save_site_setting('hero_heading', trim($_POST['heading'] ?? ''));
+        save_site_setting('hero_body', trim($_POST['body'] ?? ''));
+        save_site_setting('hero_average_rebate', trim($_POST['average_rebate'] ?? ''));
         set_flash('success', 'Hero section updated.');
     }
 
     if ($formType === 'trust_bar') {
-        save_site_setting(itr_db(), 'trust_badge_label', trim($_POST['badge_label'] ?? ''));
-        save_site_setting(itr_db(), 'trust_badge_number', trim($_POST['badge_number'] ?? ''));
-        save_site_setting(itr_db(), 'trust_message', trim($_POST['message'] ?? ''));
+        save_site_setting('trust_badge_label', trim($_POST['badge_label'] ?? ''));
+        save_site_setting('trust_badge_number', trim($_POST['badge_number'] ?? ''));
+        save_site_setting('trust_message', trim($_POST['message'] ?? ''));
         set_flash('success', 'Trust bar updated.');
     }
 
     if ($formType === 'how_it_works') {
-        save_site_setting(itr_db(), 'how_it_works_heading', trim($_POST['heading'] ?? ''));
-        save_site_setting(itr_db(), 'how_it_works_intro', trim($_POST['intro'] ?? ''));
+        save_site_setting('how_it_works_heading', trim($_POST['heading'] ?? ''));
+        save_site_setting('how_it_works_intro', trim($_POST['intro'] ?? ''));
 
         // Simplest way to keep step ordering correct: replace the set inside a transaction.
         itr_db()->beginTransaction();
@@ -39,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     if ($formType === 'stats') {
-        save_site_setting(itr_db(), 'stats_heading', trim($_POST['heading'] ?? ''));
+        save_site_setting('stats_heading', trim($_POST['heading'] ?? ''));
 
         itr_db()->beginTransaction();
         itr_db()->exec('DELETE FROM stats_items');
@@ -57,30 +57,30 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     if ($formType === 'our_story') {
-        save_site_setting(itr_db(), 'story_eyebrow', trim($_POST['eyebrow'] ?? ''));
-        save_site_setting(itr_db(), 'story_heading', trim($_POST['heading'] ?? ''));
-        save_site_setting(itr_db(), 'story_body', trim($_POST['body'] ?? ''));
+        save_site_setting('story_eyebrow', trim($_POST['eyebrow'] ?? ''));
+        save_site_setting('story_heading', trim($_POST['heading'] ?? ''));
+        save_site_setting('story_body', trim($_POST['body'] ?? ''));
         set_flash('success', '"Our Story" section updated.');
     }
 
     if ($formType === 'contact') {
-        save_site_setting(itr_db(), 'contact_phone_1', trim($_POST['phone_1'] ?? ''));
-        save_site_setting(itr_db(), 'contact_phone_2', trim($_POST['phone_2'] ?? ''));
-        save_site_setting(itr_db(), 'contact_email', trim($_POST['email'] ?? ''));
-        save_site_setting(itr_db(), 'contact_address', trim($_POST['address'] ?? ''));
+        save_site_setting('contact_phone_1', trim($_POST['phone_1'] ?? ''));
+        save_site_setting('contact_phone_2', trim($_POST['phone_2'] ?? ''));
+        save_site_setting('contact_email', trim($_POST['email'] ?? ''));
+        save_site_setting('contact_address', trim($_POST['address'] ?? ''));
         set_flash('success', 'Contact details updated.');
     }
 
     if ($formType === 'cta_banner') {
-        save_site_setting(itr_db(), 'cta_heading', trim($_POST['heading'] ?? ''));
-        save_site_setting(itr_db(), 'cta_button_text', trim($_POST['button_text'] ?? ''));
+        save_site_setting('cta_heading', trim($_POST['heading'] ?? ''));
+        save_site_setting('cta_button_text', trim($_POST['button_text'] ?? ''));
         set_flash('success', '"Get your tax back" banner updated.');
     }
 
     if ($formType === 'footer') {
-        save_site_setting(itr_db(), 'footer_cro', trim($_POST['cro'] ?? ''));
-        save_site_setting(itr_db(), 'footer_vat', trim($_POST['vat'] ?? ''));
-        save_site_setting(itr_db(), 'footer_copyright', trim($_POST['copyright'] ?? ''));
+        save_site_setting('footer_cro', trim($_POST['cro'] ?? ''));
+        save_site_setting('footer_vat', trim($_POST['vat'] ?? ''));
+        save_site_setting('footer_copyright', trim($_POST['copyright'] ?? ''));
         set_flash('success', 'Footer details updated.');
     }
 
