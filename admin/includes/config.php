@@ -12,8 +12,7 @@ define('BASE_URL', rtrim(str_replace('\\', '/', dirname($_SERVER['SCRIPT_NAME'] 
 
 // The admin panel lives in /admin at the site root, alongside /public —
 // the same folder the public site serves uploaded images/files from.
-// define('PUBLIC_UPLOAD_DIR', dirname(BASE_PATH) . '/public'); // local
-define('PUBLIC_UPLOAD_DIR', dirname(BASE_PATH) . 'https://iristaxrefund.ie/public'); // live
+define('PUBLIC_UPLOAD_DIR', dirname(BASE_PATH) . '/public');
 
 date_default_timezone_set('Europe/Dublin');
 
@@ -67,7 +66,7 @@ function public_asset_url(string $path): string
     if (preg_match('#^https?://#i', $path)) {
         return $path;
     }
-    return '../' . ltrim($path, '/');
+    return 'https://eiretaxrefund.ie/' . ltrim($path, '/');
 }
 
 /**
