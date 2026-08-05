@@ -7,7 +7,7 @@ function nav_active($key, $activeMenu) { return $key === $activeMenu ? 'active' 
 ?>
 <nav class="sidebar d-flex flex-column">
   <div class="sidebar-brand">
-    <img src="../assets/images/icon.png" alt="EIRE" height="35" />
+    <img src="assets/icon.png" alt="EIRE" height="35" />
     <div class="brand-text">
       <strong>EIRE TAX</strong>
       <span>Admin Panel</span>

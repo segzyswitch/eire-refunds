@@ -27,7 +27,7 @@ $activeMenu = $activeMenu ?? '';
 
   <link rel="stylesheet" href="<?= BASE_URL ?>/assets/css/style.css">
   <!-- X-con -->
-  <link rel="icon" type="image/x-icon" href="../assets/images/icon.png">
+  <link rel="icon" type="image/x-icon" href="assets/icon.png">
   <?php if (!empty($extraHead)) echo $extraHead; ?>
 </head>
 <body class="<?= isset($_COOKIE['sidebar_collapsed']) && $_COOKIE['sidebar_collapsed'] === '1' ? 'sidebar-collapsed' : '' ?>">
