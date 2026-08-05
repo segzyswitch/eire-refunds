@@ -12,7 +12,8 @@ define('BASE_URL', rtrim(str_replace('\\', '/', dirname($_SERVER['SCRIPT_NAME'] 
 
 // The admin panel lives in /admin at the site root, alongside /public —
 // the same folder the public site serves uploaded images/files from.
-define('PUBLIC_UPLOAD_DIR', dirname(BASE_PATH) . '/public');
+// define('PUBLIC_UPLOAD_DIR', dirname(BASE_PATH) . '/public'); // local
+define('PUBLIC_UPLOAD_DIR', dirname(BASE_PATH) . 'https://iristaxrefund.ie/public'); // live
 
 date_default_timezone_set('Europe/Dublin');
 
