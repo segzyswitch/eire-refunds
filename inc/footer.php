@@ -33,7 +33,7 @@
           <span class="badge badge-tax-return px-2 py-2" style="border-radius: 0.375rem 0 0 0.375rem;">Tax Return</span><span class="badge badge-plus px-2 py-2" style="border-radius: 0 0.375rem 0.375rem 0;">Plus</span>
         </p>
         <p>With highest tax returns possible depending on your job, wages, salaries, qualification, threshold and general status. Our fees are reasonable and varies depending on the level of services render and total amount claimed back on your behalf.</p>
-        <a href="#"><i class="bi bi-box-arrow-up-right me-1"></i>Visit Tax Return Plus</a>
+        <a href="#"><i class="bi bi-box-arrow-up-right me-1"></i>Visit Eire Tax Return Plus</a>
       </div>
     </div>
 
