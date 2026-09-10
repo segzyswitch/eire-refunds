@@ -303,7 +303,7 @@ a:hover { color: var(--itr-primary-dark); }
 }
 @media (max-width: 767px) {
   .itr-hero-photo-wrap { max-width: 260px; }
-  .itr-hero-badge { left: auto; right: -14px; top: -14px; transform: none; width: 92px; height: 92px; }
+  .itr-hero-badge { left: auto; right: -14px; top: -64px; transform: none; width: 92px; height: 92px; }
   .itr-hero-badge strong { font-size: 1.05rem; }
   .itr-slider-graphic { top: -120px; }
 }
