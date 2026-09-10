@@ -266,7 +266,7 @@ a:hover { color: var(--itr-primary-dark); }
 .itr-hero-badge {
   position: absolute;
   z-index: 2;
-  top: 50%;
+  top: 30%;
   left: -8%;
   transform: translateY(-50%);
   width: 130px;

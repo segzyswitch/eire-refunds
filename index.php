@@ -127,7 +127,7 @@ $storyBody = itr_setting('story_body');
 <section class="py-0">
   <div class="row g-0 align-items-stretch">
     <div class="col-lg-5">
-      <img src="https://picsum.photos/seed/itr-story/700/700" class="w-100 h-100" style="object-fit:cover;" alt="EIRE Tax Refunds team member">
+      <img src="https://plus.unsplash.com/premium_photo-1661326350444-8d0e57e4cdad?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0" class="w-100 h-100" style="object-fit:cover;" alt="EIRE Tax Refunds team member">
     </div>
     <div class="col-lg-7 d-flex align-items-center">
       <div class="p-5">

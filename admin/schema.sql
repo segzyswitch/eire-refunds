@@ -16,6 +16,7 @@ USE `eire_tax_admin`;
 -- ----------------------------------------------------------------------------
 -- users — admin panel logins
 -- ----------------------------------------------------------------------------
+DROP TABLE IF EXISTS `users`;
 CREATE TABLE `users` (
   `id`            INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
   `username`      VARCHAR(60)  NOT NULL UNIQUE,
@@ -36,6 +37,7 @@ INSERT INTO `users` (`username`, `password_hash`, `name`, `email`, `role`, `two_
 -- ----------------------------------------------------------------------------
 -- login_activity — powers the "Recent Login Activity" list on Security
 -- ----------------------------------------------------------------------------
+DROP TABLE IF EXISTS `login_activity`;
 CREATE TABLE `login_activity` (
   `id`         INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
   `user_id`    INT UNSIGNED NOT NULL,
@@ -58,6 +60,7 @@ INSERT INTO `login_activity` (`user_id`, `device`, `location`, `ip_address`, `cr
 -- and `status` are admin-managed fields filled in later during review —
 -- an applicant never selects a rebate type themselves on the public form.
 -- ----------------------------------------------------------------------------
+DROP TABLE IF EXISTS `applications`;
 CREATE TABLE `applications` (
   `id`               INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 
@@ -166,6 +169,7 @@ VALUES
 -- sliders — homepage hero carousel (matches the 4 real slides in index.php's
 -- #heroCarousel exactly: heading, copy, photo, and rebate badge per slide)
 -- ----------------------------------------------------------------------------
+DROP TABLE IF EXISTS `sliders`;
 CREATE TABLE `sliders` (
   `id`          INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
   `title`       VARCHAR(160) NOT NULL,
@@ -191,6 +195,7 @@ INSERT INTO `sliders` (`title`, `subtitle`, `badge_text`, `badge_value`, `image`
 -- site's 4 real categories: Registration, Your Tax Review, Your Rebate,
 -- General Tax Questions)
 -- ----------------------------------------------------------------------------
+DROP TABLE IF EXISTS `faqs`;
 CREATE TABLE `faqs` (
   `id`         INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
   `category`   VARCHAR(60)  NOT NULL DEFAULT 'General',
@@ -239,6 +244,7 @@ INSERT INTO `faqs` (`category`, `question`, `answer`, `status`, `sort_order`) VA
 -- (hero, trust bar, our story, contact, footer, CTA banner). Add a new row
 -- any time you need a new editable field — no migration required.
 -- ----------------------------------------------------------------------------
+DROP TABLE IF EXISTS `site_settings`;
 CREATE TABLE `site_settings` (
   `setting_key`   VARCHAR(100) PRIMARY KEY,
   `setting_value` TEXT NULL,
@@ -263,8 +269,8 @@ INSERT INTO `site_settings` (`setting_key`, `setting_value`) VALUES
 ('story_heading', 'Helping people claim tax back'),
 ('story_body',    'We started out more than 20 years ago in an attempt to counteract the issue of PAYE workers overpaying their taxes. It wasn''t clear to many that this was happening, or how to claim it back. We wanted to help, and EIRE Tax Refunds was born. Since launching our smart online form with eSignature to make the process even easier, we''ve grown to become a leading provider of tax back services in Ireland.'),
 
-('contact_phone_1', '059-8634 794'),
-('contact_phone_2', '01-6755 010'),
+('contact_phone_1', ''),
+('contact_phone_2', ''),
 ('contact_email',   'info@irishtaxrebates.ie'),
 ('contact_address', 'EIRE Tax Refunds, MB Tax Group, 1 Leinster St., Athy, Co. Kildare, Ireland, R14 K226'),
 
@@ -278,6 +284,7 @@ INSERT INTO `site_settings` (`setting_key`, `setting_value`) VALUES
 -- ----------------------------------------------------------------------------
 -- how_it_works_steps — the 5 numbered steps under "How it Works"
 -- ----------------------------------------------------------------------------
+DROP TABLE IF EXISTS `how_it_works_steps`;
 CREATE TABLE `how_it_works_steps` (
   `id`          INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
   `step_number` INT UNSIGNED NOT NULL,
@@ -296,6 +303,7 @@ INSERT INTO `how_it_works_steps` (`step_number`, `title`, `description`, `sort_o
 -- ----------------------------------------------------------------------------
 -- stats_items — the 3 tiles under "The market leading tax rebate service"
 -- ----------------------------------------------------------------------------
+DROP TABLE IF EXISTS `stats_items`;
 CREATE TABLE `stats_items` (
   `id`          INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
   `icon`        VARCHAR(60)  NOT NULL DEFAULT 'award',
